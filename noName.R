@@ -1,32 +1,33 @@
-v1 <- c(1,2,3)
-v1
-v2 <- c(TRUE, FALSE, FALSE)
-v2
-v3 <- c("DSFSDF","sdfdfsf","sdfsdSDF")
-v3
-c(v1,v3)
-v4 <- -2.3:7.2
-v4
+gender <- c("m", "m","f","f","f","f")
+gender
+g_factor <- factor(gender)
+g_factor
+levels(g_factor)
+g_factor2 <- factor(gender, levels = c("m","f"), labels = c("Male", "Female"))
+g_factor2
+g_factor3 <- factor(gender, ordered = TRUE)
+g_factor3
 
-vseq <- seq(from=2.3, to = 4.2, by = 0.4)
-vseq
-vseq2 <- seq(from = 5.2, to = 1.3, by = -1.3)
-vseq2
-vseq3 <- sequence(6.2)
-vseq3
-vseq4 <- sequence(-3.7)
+v1 <- 1:3
+v2 <- 4:6
+m1 <- rbind(v1, v2)
+m2 <- cbind(v1, v2)
+m1
+m2
 
-vrep1 <- rep('a', times = 5)
-vrep1
-vrep2 <- rep(c('a', ' b'), each = 3)
-vrep2
-vrep3 <- rep(c('a', 'b'), times = 5, each = 2)
-vrep3
-vrep4 <- rep(c(TRUE, FALSE), times = c(3,6))
-vrep4
+matrix(1:9, 3,3,byrow = TRUE)
+matrix(1:8, nrow = 4)
+matrix(5:15, ncol = 5)
 
-mode(vrep3)
-mode(vrep4)
-length(vrep4)
-names(vrep4) <- c("Goja", "Byungshin", "ADA", "grade1","grade1","grade1","grade1","grade2","grade3")
-names(vrep4)
+a1 <- array(1:10, dim = 10)
+a2 <- array(1:10, dim=c(2,5))
+a3 <- array(1:10, dim=c(3,3,4))
+a1
+a2
+a3
+
+d1 <- list(v2, m1)
+d1
+
+d2 <- list(a3, a2, v2, m2)
+d2
